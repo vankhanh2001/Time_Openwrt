@@ -17,27 +17,27 @@ Cài đặt các gói yêu cầu trước bằng cách mở terminal:
 opkg update && opkg install curl wget
 ```
 
-Dán lệnh bên dưới để cài đặt tập lệnh time
+Dán lệnh bên dưới để cài đặt tập lệnh thoigian
 
 Dùng wget:
 ```
-wget --no-check-certificate "https://raw.githubusercontent.com/vankhanh2001/Time_Openwrt/main/time" -O /usr/bin/time && chmod +x /usr/bin/time
+wget --no-check-certificate "https://raw.githubusercontent.com/vankhanh2001/Time_Openwrt/main/thoigian" -O /usr/bin/thoigian && chmod +x /usr/bin/thoigian
 ```
 
 dùng curl:
 ```
-curl -sL https://raw.githubusercontent.com/vankhanh2001/Time_Openwrt/main/time > /usr/bin/time && chmod +x /usr/bin/time
+curl -sL https://raw.githubusercontent.com/vankhanh2001/Time_Openwrt/main/thoigian > /usr/bin/thoigian && chmod +x /usr/bin/thoigian
 ```
 
 Nhập lệnh bên dưới vào LuCI -> System -> Startup -> Local Startup hoặc tại rc.local nếu ở trong terminal
 
 Ví dụ dùng mạng Viettel:
 ```
-/usr/bin/time m.tv360.vn
+/usr/bin/thoigian m.tv360.vn
 ```
 Nếu sử dụng crontab (kiểm tra kết nối cứ sau 1 giờ, sau đó khởi động lại vpn nếu không có kết nối), sao chép lệnh bên dưới vào LuCI -> System -> Schedule Tasks Ví dụ:
 ```
-0 * * * * /usr/bin/time m.tv360.vn cron
+0 * * * * /usr/bin/thoigian m.tv360.vn cron
 ```
 Lệnh trên cũng có thể được bao gồm trong tệp/etc/crontabs/root
 
@@ -45,7 +45,7 @@ Lệnh trên cũng có thể được bao gồm trong tệp/etc/crontabs/root
 
 Để update tập lệnh hãy thực hiện lệnh bên dưới:
 ```
-/usr/bin/time update
+/usr/bin/thoigian update
 ```
 Cập nhật thành công ta được như sau:
 
