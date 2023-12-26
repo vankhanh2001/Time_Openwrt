@@ -17,27 +17,27 @@ Cài đặt các gói yêu cầu trước bằng cách mở terminal:
 opkg update && opkg install curl wget
 ```
 
-Dán lệnh bên dưới để cài đặt tập lệnh viet
+Dán lệnh bên dưới để cài đặt tập lệnh time
 
 Dùng wget:
 ```
-wget --no-check-certificate "https://raw.githubusercontent.com/vietter99/timesopenwrt/master/viet" -O /usr/bin/viet && chmod +x /usr/bin/viet
+wget --no-check-certificate "https://raw.githubusercontent.com/vankhanh2001/Time_Openwrt/main/time" -O /usr/bin/time && chmod +x /usr/bin/time
 ```
 
 dùng curl:
 ```
-curl -sL https://raw.githubusercontent.com/vietter99/timesopenwrt/master/viet > /usr/bin/viet && chmod +x /usr/bin/viet
+curl -sL https://raw.githubusercontent.com/vankhanh2001/Time_Openwrt/main/time > /usr/bin/time && chmod +x /usr/bin/time
 ```
 
 Nhập lệnh bên dưới vào LuCI -> System -> Startup -> Local Startup hoặc tại rc.local nếu ở trong terminal
 
 Ví dụ dùng mạng Viettel:
 ```
-/usr/bin/viet m.tv360.vn
+/usr/bin/time m.tv360.vn
 ```
 Nếu sử dụng crontab (kiểm tra kết nối cứ sau 1 giờ, sau đó khởi động lại vpn nếu không có kết nối), sao chép lệnh bên dưới vào LuCI -> System -> Schedule Tasks Ví dụ:
 ```
-0 * * * * /usr/bin/viet m.tv360.vn cron
+0 * * * * /usr/bin/time m.tv360.vn cron
 ```
 Lệnh trên cũng có thể được bao gồm trong tệp/etc/crontabs/root
 
@@ -45,18 +45,18 @@ Lệnh trên cũng có thể được bao gồm trong tệp/etc/crontabs/root
 
 Để update tập lệnh hãy thực hiện lệnh bên dưới:
 ```
-/usr/bin/viet update
+/usr/bin/time update
 ```
 Cập nhật thành công ta được như sau:
 
-viet: Update tệp lệnh...
+time: Update tệp lệnh...
 
-viet: Đang tải tệp lệnh...
+time: Đang tải tệp lệnh...
 
-viet: update thành công.
+time: update thành công.
 
-viet: Đã xóa tệp update!
+time: Đã xóa tệp update!
 
 Cách dùng: Thêm tên miền sau tệp lệnh!.
 
-viet: Thiếu tên miền/URL!.
+time: Thiếu tên miền/URL!.
